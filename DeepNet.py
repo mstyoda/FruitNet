@@ -9,6 +9,7 @@ class DeepNet(object):
         num_class = 10
         self.X = tf.placeholder(tf.float32, [-1,32,32,3])
         self.Y = tf.placeholder(tf.float32, [-1, num_class])
+        self.lr = tf.placeholder(tf.float32, [])
         self.build()
     
     def build(self):
@@ -55,4 +56,3 @@ class DeepNet(object):
 
 if __name__ == '__main__':
     deepNet = DeepNet()
-    
